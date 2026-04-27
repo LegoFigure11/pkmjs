@@ -69,6 +69,8 @@ export class PA9 {
 
     /** @returns {byte} */ get Gender() { return (this.dv.getUint8(0x22) >> 1) & 0x3; }
 
+    /** @returns {boolean} */ get IsAlpha() { return this.dv.getUint8(0x23) !== 0; }
+
     /** @returns {byte} */ get Form() { return this.dv.getUint8(0x24); }
 
     /** @returns {int} */ get EV_HP() { return this.dv.getUint8(0x26); }
