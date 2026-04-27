@@ -57,7 +57,7 @@ export class PA8 {
     /** @returns {ushort} */ get MarkingValue() { return this.dv.getUint16(0x18, true); }
 
     /** @returns {uint} */ get PID() { return this.dv.getUint32(0x1C, true) >>> 0; }
-    /** @returns {uint} */ get PSV() { return (PID >>> 16) ^ (PID & 0xFFFF) >>> 4; }
+    /** @returns {uint} */ get PSV() { return (this.PID >>> 16) ^ (this.PID & 0xFFFF) >>> 4; }
 
     /** @returns {uint} */ get ShinyXOR() { return (this.PID >>> 16) ^ (this.PID & 0xFFFF) ^ this.TID16 ^ this.SID16; }
     /** @returns {boolean} */ get IsShiny() { return this.TSV == this.PSV; }

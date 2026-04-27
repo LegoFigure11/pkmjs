@@ -53,7 +53,7 @@ export class PK6 {
     /** @returns {int} */ get TrainingBag() { return this.dv.getUint8(0x17); }
 
     /** @returns {uint} */ get PID() { return this.dv.getUint32(0x18, true) >>> 0; }
-    /** @returns {uint} */ get PSV() { return (PID >>> 16) ^ (PID & 0xFFFF) >>> 4; }
+    /** @returns {uint} */ get PSV() { return (this.PID >>> 16) ^ (this.PID & 0xFFFF) >>> 4; }
 
     /** @returns {uint} */ get ShinyXOR() { return (this.PID >>> 16) ^ (this.PID & 0xFFFF) ^ this.TID16 ^ this.SID16; }
     /** @returns {boolean} */ get IsShiny() { return this.TSV == this.PSV; }

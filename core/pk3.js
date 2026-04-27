@@ -28,7 +28,7 @@ export class PK3 {
 
     //// 0x20 Intro
     /** @returns {uint} */ get PID() { return this.dv.getUint32(0x00, true) >>> 0; }
-    /** @returns {uint} */ get PSV() { return (PID >>> 16) ^ (PID & 0xFFFF) >>> 3; }
+    /** @returns {uint} */ get PSV() { return (this.PID >>> 16) ^ (this.PID & 0xFFFF) >>> 3; }
     
     /** @returns {uint} */ get ID32() { return this.dv.getUint32(0x04, true) >>> 0; }
     /** @returns {ushort} */ get TID16() { return this.dv.getUint16(0x04, true); }
