@@ -117,7 +117,7 @@ export class PK3 {
     /** @returns {byte} */ get ContestSheen() { return this.dv.getUint8(0x43); }
 
     //// Block D
-    /** @returns {byte} */ get PokerusState() { return this.dv.getUint8(0x82); }
+    /** @returns {byte} */ get PokerusState() { return this.dv.getUint8(0x44); }
     /** @returns {int} */ get PokerusDays() { return (this.PokerusState & 0xF) >>> 0; }
     /** @returns {int} */ get PokerusStrain() { return (this.PokerusState >> 4) >>> 0; }
 

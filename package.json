@@ -1,6 +1,6 @@
 {
   "name": "@not-a-waffle/pkmjs",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Read-only Pokemon Containers based on PKHeX.Core",
   "license": "GPL-3.0",
   "author": "LegoFigure11",
@@ -17,7 +17,9 @@
   },
   "scripts": {
     "build": "esbuild index.js --bundle --minify --sourcemap --format=iife --global-name=pkmjs --target=chrome58,firefox57,safari11,edge16 --outfile=pkmjs.min.js",
-    "local": "esbuild index.js --bundle --format=iife --global-name=pkmjs --target=chrome58,firefox57,safari11,edge16 --outfile=pkmjs.js"
+    "local": "esbuild index.js --bundle --format=iife --global-name=pkmjs --target=chrome58,firefox57,safari11,edge16 --outfile=pkmjs.js",
+    "patch": "npm version patch --no-git-tag-version",
+    "publish": "npm publish --access public"
   },
   "devDependencies": {
     "esbuild": "0.28.0"
