@@ -1,4 +1,4 @@
-import { getStringFromBuffer } from "./util/util.js";
+import { getStringFromBuffer6789 } from "./util/util.js";
 
 /**
  * @typedef {number} byte   - 8-bit unsigned integer
@@ -191,7 +191,7 @@ export class PB7 {
     /** @returns {string} */
     get Nickname() {
         var slice = this.buf.slice(0x40, 0x40 + 26);
-        return getStringFromBuffer(slice);
+        return getStringFromBuffer6789(slice);
     }
     
     /** @returns {ushort} */ get Move1() { return this.dv.getUint16(0x5a, true); }
@@ -230,7 +230,7 @@ export class PB7 {
     /** @returns {string} */
     get HandlingTrainerName() {
         var slice = this.buf.slice(0x78, 0x78 + 26);
-        return getStringFromBuffer(slice);
+        return getStringFromBuffer6789(slice);
     }
 
     /** @returns {byte} */ get HandlingTrainerGender() { return this.dv.getUint8(0x92); }
@@ -249,7 +249,7 @@ export class PB7 {
     //// Block D
     get OriginalTrainerName() {
         var slice = this.buf.slice(0xB0, 0xB0 + 26);
-        return getStringFromBuffer(slice);
+        return getStringFromBuffer6789(slice);
     }
 
     /** @returns {byte} */ get OriginalTrainerFriendship() { return this.dv.getUint8(0xca); }

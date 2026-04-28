@@ -1,4 +1,4 @@
-import { getStringFromBuffer } from "./util/util.js";
+import { getStringFromBuffer6789 } from "./util/util.js";
 
 /**
  * @typedef {number} byte   - 8-bit unsigned integer
@@ -217,7 +217,7 @@ export class PK5 {
     /** @returns {string} */
     get Nickname() {
         var slice = this.buf.slice(0x48, 0x48 + 22);
-        return getStringFromBuffer(slice);
+        return getStringFromBuffer6789(slice);
     }
 
     /** @returns {byte} */ get Version() { return this.dv.getUint8(0x5f); }
@@ -253,7 +253,7 @@ export class PK5 {
     
     get OriginalTrainerName() {
         var slice = this.buf.slice(0x68, 0x68 + 16);
-        return getStringFromBuffer(slice);
+        return getStringFromBuffer6789(slice);
     }
 
     /** @returns {byte} */ get EggYear() { return this.dv.getUint8(0x78); }

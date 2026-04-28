@@ -1,4 +1,4 @@
-import { getStringFromBuffer, SwapBits, getSpecies3 } from "./util/util.js";
+import { SwapBits, getSpecies3, getStringFromBuffer3 } from "./util/util.js";
 
 /**
  * @typedef {number} byte   - 8-bit unsigned integer
@@ -38,7 +38,7 @@ export class PK3 {
     /** @returns {string} */
     get Nickname() {
         var slice = this.buf.slice(0x08, 0x08 + 20);
-        return getStringFromBuffer(slice);
+        return getStringFromBuffer3(slice);
     }
 
     /** @returns {byte} */ get Language() { return this.dv.getUint8(0x12); }
@@ -52,7 +52,7 @@ export class PK3 {
     /** @returns {string} */
     get OriginalTrainerName() {
         var slice = this.buf.slice(0x14, 0x14 + 14);
-        return getStringFromBuffer(slice);
+        return getStringFromBuffer3(slice);
     }
 
     /** @returns {byte} */ get MarkingValue() { return SwapBits(this.dv.getUint8(0x1b), 1, 2); }

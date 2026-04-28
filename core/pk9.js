@@ -1,4 +1,4 @@
-import { getSpecies9, GetFlag, getStringFromBuffer } from "./util/util.js";
+import { getSpecies9, GetFlag, getStringFromBuffer6789 } from "./util/util.js";
 
 /**
  * @typedef {number} byte   - 8-bit unsigned integer
@@ -303,7 +303,7 @@ export class PK9 {
     /** @returns {string} */
     get Nickname() {
         var slice = this.buf.slice(0x56, 0x56 + 26);
-        return getStringFromBuffer(slice);
+        return getStringFromBuffer6789(slice);
     }
 
     /** @returns {ushort} */ get Move1() { return this.dv.getUint16(0x72, true); }
@@ -350,7 +350,7 @@ export class PK9 {
     /** @returns {string} */
     get HandlingTrainerName() {
         var slice = this.buf.slice(0xA8, 0xA8 + 26);
-        return getStringFromBuffer(slice);
+        return getStringFromBuffer6789(slice);
     }
 
     /** @returns {byte} */ get HandlingTrainerGender() { return this.dv.getUint8(0xC2); }
@@ -379,7 +379,7 @@ export class PK9 {
     //// Block D
     get OriginalTrainerName() {
         var slice = this.buf.slice(0xF8, 0xF8 + 26);
-        return getStringFromBuffer(slice);
+        return getStringFromBuffer6789(slice);
     }
 
     /** @returns {byte} */ get OriginalTrainerFriendship() { return this.dv.getUint8(0x112); }
