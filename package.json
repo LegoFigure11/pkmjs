@@ -1,6 +1,6 @@
 {
   "name": "@not-a-waffle/pkmjs",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Read-only Pokemon Containers based on PKHeX.Core",
   "license": "GPL-3.0",
   "author": "LegoFigure11",

@@ -1,4 +1,4 @@
-import { getStringFromBuffer, SwapBits } from "./util/util.js";
+import { getStringFromBuffer, SwapBits, getSpecies3 } from "./util/util.js";
 
 /**
  * @typedef {number} byte   - 8-bit unsigned integer
@@ -66,7 +66,7 @@ export class PK3 {
 
     /** @returns {ushort} */ get SpeciesInternal() { return this.dv.getUint16(0x20, true); }
     
-    /** @returns {ushort} */ get Species() { return getNational3(this.SpeciesInternal); }
+    /** @returns {ushort} */ get Species() { return getSpecies3(this.SpeciesInternal); }
 
     /** @returns {ushort} */ get HeldItem() { return this.dv.getUint16(0x22, true); }
 
