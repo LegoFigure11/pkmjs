@@ -393,7 +393,7 @@ function getNational3(raw) {
   if (raw < firstnational3) return raw;
   var shift = raw - firstinternal3;
   if (shift >= table3.length) return 0;
-  return raw + table[shift];
+  return raw + table3[shift];
 }
 
 export function getSpecies9(id) {
