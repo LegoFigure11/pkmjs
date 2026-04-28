@@ -47,7 +47,7 @@ export class PK3 {
     
     /** @returns {boolean} */ get FlagHasSpecies() { return (this.dv.getUint8(0x13) & 2) != 0; }
     
-    /** @returns {boolean} */ get FlaIsEgg() { return (this.dv.getUint8(0x13) & 4) != 0; }
+    /** @returns {boolean} */ get FlagIsEgg() { return (this.dv.getUint8(0x13) & 4) != 0; }
 
     /** @returns {string} */
     get OriginalTrainerName() {
