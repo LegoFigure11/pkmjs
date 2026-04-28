@@ -1,6 +1,9 @@
 index.html
 index.min.js
 index.min.js.map
+pkmjs.js
+pkmjs.min.js
+pkmjs.min.js.map
 
 # Logs
 logs
