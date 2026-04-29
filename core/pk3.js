@@ -148,7 +148,7 @@ export class PK3 {
     /** @returns {byte} */ get RibbonCountG3Smart() { return ((this.RIB0 >>> 9) & 0x7); }
     /** @returns {byte} */ get RibbonCountG3Tough() { return ((this.RIB0 >>> 12) & 0x7); }
     
-    /** @returns {boolean} */ get RibbRibbonChampionG3() { return (this.RIB0 & (1 << 15)) == 1 << 15; }
+    /** @returns {boolean} */ get RibbonChampionG3() { return (this.RIB0 & (1 << 15)) == 1 << 15; }
     /** @returns {boolean} */ get RibbonWinning() { return (this.RIB0 & (1 << 16)) == 1 << 16; }
     /** @returns {boolean} */ get RibboRibbonVictory() { return (this.RIB0 & (1 << 17)) == 1 << 17; }
 
